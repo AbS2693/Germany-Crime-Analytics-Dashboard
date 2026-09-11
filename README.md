@@ -238,7 +238,8 @@ Documented deliberately, not hidden — a dataset built from real government pub
 
 ## 📬 Author
 
-**[Abhishek Bangale]**
+**Abhishek Bangale**
+
 [LinkedIn](https://linkedin.com/in/abhishekbangale)
 
 ---
