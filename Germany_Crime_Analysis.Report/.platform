@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Germany_Crime_Analysis"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "293671b0-aea2-4d84-bc04-3a2c843cda79"
+  }
+}

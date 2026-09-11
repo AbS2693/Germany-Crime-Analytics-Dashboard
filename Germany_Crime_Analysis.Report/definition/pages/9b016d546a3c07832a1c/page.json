@@ -1,0 +1,8 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "9b016d546a3c07832a1c",
+  "displayName": "TOP 10 Rank Race Animated",
+  "displayOption": "FitToPage",
+  "height": 1080,
+  "width": 1920
+}
