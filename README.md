@@ -1,4 +1,4 @@
-# 🇩🇪 Germany Crime Intelligence Dashboard (2015-2025)
+# 🇩🇪 Germany Crime Analytics Dashboard (2015-2025)
 
 **An end-to-end Power BI dashboard tracking crime-rate rankings across 84 major German cities, 2015–2025, built on official BKA (Bundeskriminalamt) statistics.**
 
