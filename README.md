@@ -176,6 +176,14 @@ IF(COUNTROWS(MissingYearsTable) = 0,
 
 ---
 
+## 🧭 Navigation Walkthrough
+
+The six report pages aren't a linear sequence — every drillthrough page can be reached from at least two different interaction paths (a dedicated button, native right-click drillthrough, or a tooltip-level drillthrough on a specific data point), and several support the reverse journey too.
+
+**[📄 Read the full Navigation & Drillthrough Walkthrough (PDF)](./WALKTHROUGH.pdf)** — a step-by-step, screenshot-illustrated tour of exactly how the pages connect, including the 2015 "New Entry" baseline behavior and a source-verified drillthrough example (Trier, 2016).
+
+---
+
 ## ⚠️ Known Data Limitations
 
 Documented deliberately, not hidden — a dataset built from real government publications has real seams:
@@ -210,7 +218,8 @@ Documented deliberately, not hidden — a dataset built from real government pub
 │   ├── 04_TOP10_Cities_Rank_shift.png
 │   ├── 05_Longest_Streak.png
 │   └── 06_Bump_Chart_Overview.png
-├── LICENSE                                  # MIT license (code/report design)
+├── WALKTHROUGH.pdf                          # Navigation
+├── LICENSE                                  
 └── README.md                                # This file
 ```
 
