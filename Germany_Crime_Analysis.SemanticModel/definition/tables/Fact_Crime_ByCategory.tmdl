@@ -1,0 +1,109 @@
+table Fact_Crime_ByCategory
+	lineageTag: cca07779-6e13-454e-b0f4-3f6ae35379cb
+
+	measure NoDataMessage = ```
+			
+			IF(
+			    ISBLANK(CALCULATE(SUM(Fact_Crime_ByCategory[erfasste Fälle]))),
+			    "No data available for this city in the selected year. 
+			    This city may not have met BKA's population threshold, or 
+			    wasn't a tracked exception, for this year.",
+			    BLANK()
+			)
+			```
+		lineageTag: 74514840-d888-4a8e-aab6-92846437add7
+
+	measure ChartTitle_CategoryBreakdown =
+			
+			VAR SelCity = SELECTEDVALUE(Dim_City[Stadt])
+			VAR SelYear = SELECTEDVALUE(Dim_Year[Year])
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    NOT ISBLANK(SelCity) && NOT ISBLANK(SelYear), SelCity & " — " & SelYear & " Crime Category Breakdown",
+			    NOT ISBLANK(SelCity) && ISBLANK(SelYear), SelCity & " — All Years Crime Category Breakdown",
+			    ISBLANK(SelCity) && NOT ISBLANK(SelYear), "All Cities — " & SelYear & " Crime Category Breakdown",
+			    "All Cities — All Years (2015–2025) Crime Category Breakdown"
+			)
+		lineageTag: 1649c36e-b655-4c0a-8a11-b5f2c010b019
+
+	measure ButtonLabel_ClearFilters =
+			
+			VAR SelCity = SELECTEDVALUE(Dim_City[Stadt])
+			VAR SelYear = SELECTEDVALUE(Dim_Year[Year])
+			RETURN
+			IF(
+			    ISBLANK(SelCity) && ISBLANK(SelYear),
+			    "Select a City & Year to View Breakdown",
+			    "Click to Clear All Filters"
+			)
+		lineageTag: 8fb0b079-be98-4703-98d0-c22f7051decb
+
+	column Straftat
+		dataType: string
+		lineageTag: 26194cbc-b1b8-4676-9364-c7d4a4376fe5
+		summarizeBy: none
+		sourceColumn: Straftat
+
+		annotation SummarizationSetBy = Automatic
+
+	column Stadt
+		dataType: string
+		lineageTag: b25ece09-a4c2-4deb-a68f-9dd4876427f9
+		summarizeBy: none
+		sourceColumn: Stadt
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'erfasste Fälle'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3ac2c4e0-240b-4b17-9212-2c55e16fab9f
+		summarizeBy: sum
+		sourceColumn: erfasste Fälle
+
+		annotation SummarizationSetBy = Automatic
+
+	column HZ
+		dataType: double
+		lineageTag: 8a99c382-2b08-4cd0-9fb1-e10479388ef3
+		summarizeBy: sum
+		sourceColumn: HZ
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AQ
+		dataType: double
+		lineageTag: ef9a3042-b44d-47f7-a4ce-44c19bf85a46
+		summarizeBy: sum
+		sourceColumn: AQ
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Year
+		dataType: string
+		lineageTag: d42411bb-de15-46ba-8db6-6980ce19ac67
+		summarizeBy: none
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Fact_Crime_ByCategory = m
+		mode: import
+		source =
+				let
+				    Source = Table.Combine({#"2015_ByCategory", #"2016_ByCategory", #"2017_ByCategory", #"2018_ByCategory", #"2019_ByCategory", #"2020_ByCategory", #"2021_ByCategory", #"2022_ByCategory", #"2023_ByCategory", #"2024_ByCategory", #"2025_ByCategory"}),
+				    #"Filtered Rows" = Table.SelectRows(Source, each true),
+				    #"Replaced Value" = Table.ReplaceValue(#"Filtered Rows","Rostock, Hanse- und Universitätsstadt","Rostock",Replacer.ReplaceText,{"Stadt"}),
+				    #"Filtered Rows1" = Table.SelectRows(#"Replaced Value", each true)
+				in
+				    #"Filtered Rows1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

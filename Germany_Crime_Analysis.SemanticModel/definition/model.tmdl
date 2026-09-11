@@ -1,0 +1,23 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["2015_Template_Main Recipe","2016_Template","2017_Template","2018_Template","2019_Template","2020_Template","2021_Template","2022_Template","2023_Template","2024_Template","2025_Template","Fact_Crime","Dim_City","Dim_Year","2015_ByCategory","2016_ByCategory","2017_ByCategory","2018_ByCategory","2019_ByCategory","2020_ByCategory","2021_ByCategory","2022_ByCategory","2023_ByCategory","2024_ByCategory","2025_ByCategory","Fact_Crime_ByCategory","Dim_Category"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Fact_Crime
+ref table Dim_City
+ref table Dim_Year
+ref table Fact_Crime_ByCategory
+ref table Dim_Category
+
+ref cultureInfo en-US
+

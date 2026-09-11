@@ -1,0 +1,498 @@
+expression '2015_Template_Main Recipe' =
+		let
+		    Source = Folder.Files("E:\Dataset_Crime_Analysis"),
+		    #"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx" = Source{[#"Folder Path"="E:\Dataset_Crime_Analysis\",Name="2015_Staedte_Faelle_HZ.xlsx"]}[Content],
+		    #"Imported Excel Workbook" = Excel.Workbook(#"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx"),
+		    T01_Städte_Sheet = #"Imported Excel Workbook"{[Item="T01_Städte",Kind="Sheet"]}[Data],
+		    #"Removed Top Rows" = Table.Skip(T01_Städte_Sheet, 4),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Top Rows", [PromoteAllScalars=true]),
+		    #"Removed Top Rows1" = Table.Skip(#"Promoted Headers", 4),
+		    #"Removed Other Columns" = Table.SelectColumns(#"Removed Top Rows1",{"Straftat", "Stadt", "erfasste Fälle", "HZ nach Zensus", "Column12"}),
+		    #"Renamed Columns" = Table.RenameColumns(#"Removed Other Columns",{{"Column12", "AQ"}}),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns",{{"AQ", type number}, {"Straftat", type text}, {"Stadt", type text}, {"erfasste Fälle", Int64.Type}, {"HZ nach Zensus", type number}}),
+		    #"Filtered Rows" = Table.SelectRows(#"Changed Type", each ([Straftat] = "Straftaten insgesamt")),
+		    #"Renamed Columns1" = Table.RenameColumns(#"Filtered Rows",{{"HZ nach Zensus", "HZ"}}),
+		    #"Added Custom" = Table.AddColumn(#"Renamed Columns1", "Year", each 2015),
+		    #"Filtered Rows1" = Table.SelectRows(#"Added Custom", each ([Stadt] <> null and [Stadt] <> ""))
+		in
+		    #"Filtered Rows1"
+	lineageTag: 9181f941-08fd-4c16-b949-a82229334f23
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 2016_Template =
+		let
+		    Source = Folder.Files("E:\Dataset_Crime_Analysis"),
+		    #"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx" = Source{[#"Folder Path"="E:\Dataset_Crime_Analysis\",Name="2016_Staedte_Faelle_HZ.xlsx"]}[Content],
+		    #"Imported Excel Workbook" = Excel.Workbook(#"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx"),
+		    T01_Städte_Sheet = #"Imported Excel Workbook"{[Item="BKA-LKS-F-05-T01 Städte ab 100T",Kind="Sheet"]}[Data],
+		    #"Removed Top Rows" = Table.Skip(T01_Städte_Sheet, 4),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Top Rows", [PromoteAllScalars=true]),
+		    #"Removed Top Rows1" = Table.Skip(#"Promoted Headers", 4),
+		    #"Removed Other Columns" = Table.SelectColumns(#"Removed Top Rows1",{"Straftat", "Stadt", "erfasste Fälle", "HZ nach Zensus", "Column12"}),
+		    #"Renamed Columns" = Table.RenameColumns(#"Removed Other Columns",{{"Column12", "AQ"}}),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns",{{"AQ", type number}, {"Straftat", type text}, {"Stadt", type text}, {"erfasste Fälle", Int64.Type}, {"HZ nach Zensus", type number}}),
+		    #"Filtered Rows" = Table.SelectRows(#"Changed Type", each ([Straftat] = "Straftaten insgesamt")),
+		    #"Renamed Columns1" = Table.RenameColumns(#"Filtered Rows",{{"HZ nach Zensus", "HZ"}}),
+		    #"Added Custom" = Table.AddColumn(#"Renamed Columns1", "Year", each 2016)
+		in
+		    #"Added Custom"
+	lineageTag: aac31147-459d-4df0-a281-351637b0a48b
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 2017_Template =
+		let
+		    Source = Folder.Files("E:\Dataset_Crime_Analysis"),
+		    #"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx" = Source{[#"Folder Path"="E:\Dataset_Crime_Analysis\",Name="2017_Staedte_Faelle_HZ.xlsx"]}[Content],
+		    #"Imported Excel Workbook" = Excel.Workbook(#"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx"),
+		    T01_Städte_Sheet = #"Imported Excel Workbook"{[Item="T01_Städte",Kind="Sheet"]}[Data],
+		    #"Removed Top Rows" = Table.Skip(T01_Städte_Sheet, 4),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Top Rows", [PromoteAllScalars=true]),
+		    #"Removed Top Rows1" = Table.Skip(#"Promoted Headers", 4),
+		    #"Removed Other Columns" = Table.SelectColumns(#"Removed Top Rows1",{"Straftat", "Stadt", "erfasste Fälle", "HZ nach Zensus", "Column12"}),
+		    #"Renamed Columns" = Table.RenameColumns(#"Removed Other Columns",{{"Column12", "AQ"}}),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns",{{"AQ", type number}, {"Straftat", type text}, {"Stadt", type text}, {"erfasste Fälle", Int64.Type}, {"HZ nach Zensus", type number}}),
+		    #"Filtered Rows" = Table.SelectRows(#"Changed Type", each ([Straftat] = "Straftaten insgesamt")),
+		    #"Renamed Columns1" = Table.RenameColumns(#"Filtered Rows",{{"HZ nach Zensus", "HZ"}}),
+		    #"Added Custom" = Table.AddColumn(#"Renamed Columns1", "Year", each 2017)
+		in
+		    #"Added Custom"
+	lineageTag: b10263ca-999d-4984-8d8f-76a289bdaff9
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 2018_Template =
+		let
+		    Source = Folder.Files("E:\Dataset_Crime_Analysis"),
+		    #"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx" = Source{[#"Folder Path"="E:\Dataset_Crime_Analysis\",Name="2018_Staedte_Faelle_HZ.xlsx"]}[Content],
+		    #"Imported Excel Workbook" = Excel.Workbook(#"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx"),
+		    T01_Städte_Sheet = #"Imported Excel Workbook"{[Item="BKA-LKS-F-05-T01-Staedte-ab-100",Kind="Sheet"]}[Data],
+		    #"Removed Top Rows" = Table.Skip(T01_Städte_Sheet, 1),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Top Rows", [PromoteAllScalars=true]),
+		    #"Removed Top Rows1" = Table.Skip(#"Promoted Headers",1),
+		    #"Removed Other Columns" = Table.SelectColumns(#"Removed Top Rows1",{"Straftat", "Stadt", "erfasste Faelle", "HZ nach Zensus", "Aufklaerungsquote"}),
+		    #"Filtered Rows" = Table.SelectRows(#"Removed Other Columns", each ([Straftat] = "Straftaten insgesamt")),
+		    #"Renamed Columns1" = Table.RenameColumns(#"Filtered Rows",{{"HZ nach Zensus", "HZ"}}),
+		    #"Added Custom" = Table.AddColumn(#"Renamed Columns1", "Year", each 2018),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Added Custom",{{"erfasste Faelle", Int64.Type}, {"Straftat", type text}, {"Stadt", type text}, {"HZ", type number}, {"Aufklaerungsquote", type number}}),
+		    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"Aufklaerungsquote", "AQ"}, {"erfasste Faelle", "erfasste Fälle"}})
+		in
+		    #"Renamed Columns"
+	lineageTag: bbdca25a-4368-4c22-abf8-dc910c12555d
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 2019_Template =
+		let
+		    Source = Folder.Files("E:\Dataset_Crime_Analysis"),
+		    #"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx" = Source{[#"Folder Path"="E:\Dataset_Crime_Analysis\",Name="2019_Staedte_Faelle_HZ.xlsx"]}[Content],
+		    #"Imported Excel Workbook" = Excel.Workbook(#"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx"),
+		    T01_Städte_Sheet = #"Imported Excel Workbook"{[Item="T01_Städte",Kind="Sheet"]}[Data],
+		    #"Removed Top Rows" = Table.Skip(T01_Städte_Sheet, 4),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Top Rows", [PromoteAllScalars=true]),
+		    #"Removed Top Rows1" = Table.Skip(#"Promoted Headers", 4),
+		    #"Removed Other Columns" = Table.SelectColumns(#"Removed Top Rows1",{"Straftat", "Stadt", "erfasste Fälle", "HZ nach Zensus", "Column12"}),
+		    #"Renamed Columns" = Table.RenameColumns(#"Removed Other Columns",{{"Column12", "AQ"}}),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns",{{"AQ", type number}, {"Straftat", type text}, {"Stadt", type text}, {"erfasste Fälle", Int64.Type}, {"HZ nach Zensus", type number}}),
+		    #"Filtered Rows" = Table.SelectRows(#"Changed Type", each ([Straftat] = "Straftaten insgesamt")),
+		    #"Renamed Columns1" = Table.RenameColumns(#"Filtered Rows",{{"HZ nach Zensus", "HZ"}}),
+		    #"Added Custom" = Table.AddColumn(#"Renamed Columns1", "Year", each 2019),
+		    #"Changed Type1" = Table.TransformColumnTypes(#"Added Custom",{{"erfasste Fälle", Int64.Type}})
+		in
+		    #"Changed Type1"
+	lineageTag: 139e8580-5ec0-4432-be50-7847f4f90968
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 2020_Template =
+		let
+		    Source = Folder.Files("E:\Dataset_Crime_Analysis"),
+		    #"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx" = Source{[#"Folder Path"="E:\Dataset_Crime_Analysis\",Name="2020_Staedte_Faelle_HZ.xlsx"]}[Content],
+		    #"Imported Excel Workbook" = Excel.Workbook(#"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx"),
+		    T01_Städte_Sheet = #"Imported Excel Workbook"{[Item="T01_Städte",Kind="Sheet"]}[Data],
+		    #"Removed Top Rows" = Table.Skip(T01_Städte_Sheet, 4),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Top Rows", [PromoteAllScalars=true]),
+		    #"Removed Top Rows1" = Table.Skip(#"Promoted Headers", 4),
+		    #"Renamed Columns2" = Table.RenameColumns(#"Removed Top Rows1",{{"Column12", "AQ"}}),
+		    #"Removed Other Columns" = Table.SelectColumns(#"Renamed Columns2",{"Straftat", "Stadt", "Anzahl erfasste Fälle", "HZ", "AQ"}),
+		    #"Filtered Rows" = Table.SelectRows(#"Removed Other Columns", each ([Straftat] = "Straftaten insgesamt")),
+		    #"Added Custom" = Table.AddColumn(#"Filtered Rows", "Year", each 2020),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Added Custom",{{"Straftat", type text}, {"Stadt", type text}, {"Anzahl erfasste Fälle", Int64.Type}, {"HZ", type number}, {"AQ", type number}}),
+		    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"Anzahl erfasste Fälle", "erfasste Fälle"}})
+		in
+		    #"Renamed Columns"
+	lineageTag: d96e3ea2-e8a6-4d48-8d11-329cb01a4fcc
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 2021_Template =
+		let
+		    Source = Folder.Files("E:\Dataset_Crime_Analysis"),
+		    #"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx" = Source{[#"Folder Path"="E:\Dataset_Crime_Analysis\",Name="2021_Staedte_Faelle_HZ.xlsx"]}[Content],
+		    #"Imported Excel Workbook" = Excel.Workbook(#"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx"),
+		    T01_Städte_Sheet = #"Imported Excel Workbook"{[Item="T01_Städte",Kind="Sheet"]}[Data],
+		    #"Removed Top Rows" = Table.Skip(T01_Städte_Sheet, 4),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Top Rows", [PromoteAllScalars=true]),
+		    #"Removed Top Rows1" = Table.Skip(#"Promoted Headers", 4),
+		    #"Renamed Columns2" = Table.RenameColumns(#"Removed Top Rows1",{{"Column12", "AQ"}}),
+		    #"Removed Other Columns" = Table.SelectColumns(#"Renamed Columns2",{"Straftat", "Stadt", "Anzahl erfasste Fälle", "HZ", "AQ"}),
+		    #"Filtered Rows" = Table.SelectRows(#"Removed Other Columns", each ([Straftat] = "Straftaten insgesamt")),
+		    #"Added Custom" = Table.AddColumn(#"Filtered Rows", "Year", each 2021),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Added Custom",{{"Straftat", type text}, {"Stadt", type text}, {"Anzahl erfasste Fälle", Int64.Type}, {"HZ", type number}, {"AQ", type number}}),
+		    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"Anzahl erfasste Fälle", "erfasste Fälle"}})
+		in
+		    #"Renamed Columns"
+	lineageTag: 23ebd51d-9834-41d8-a62a-bf2bd00aea10
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 2022_Template =
+		let
+		    Source = Folder.Files("E:\Dataset_Crime_Analysis"),
+		    #"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx" = Source{[#"Folder Path"="E:\Dataset_Crime_Analysis\",Name="2022_Staedte_Faelle_HZ.xlsx"]}[Content],
+		    #"Imported Excel Workbook" = Excel.Workbook(#"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx"),
+		    T01_Städte_Sheet = #"Imported Excel Workbook"{[Item="T01_Städte",Kind="Sheet"]}[Data],
+		    #"Removed Top Rows" = Table.Skip(T01_Städte_Sheet, 4),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Top Rows", [PromoteAllScalars=true]),
+		    #"Removed Top Rows1" = Table.Skip(#"Promoted Headers", 4),
+		    #"Renamed Columns2" = Table.RenameColumns(#"Removed Top Rows1",{{"Column12", "AQ"}}),
+		    #"Removed Other Columns" = Table.SelectColumns(#"Renamed Columns2",{"Straftat", "Stadt", "Anzahl erfasste Fälle", "HZ", "AQ"}),
+		    #"Filtered Rows" = Table.SelectRows(#"Removed Other Columns", each ([Straftat] = "Straftaten insgesamt")),
+		    #"Added Custom" = Table.AddColumn(#"Filtered Rows", "Year", each 2022),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Added Custom",{{"Straftat", type text}, {"Stadt", type text}, {"Anzahl erfasste Fälle", Int64.Type}, {"HZ", type number}, {"AQ", type number}}),
+		    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"Anzahl erfasste Fälle", "erfasste Fälle"}})
+		in
+		    #"Renamed Columns"
+	lineageTag: 8886051a-beeb-43cc-9a97-51f28bb6e994
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 2023_Template =
+		let
+		    Source = Folder.Files("E:\Dataset_Crime_Analysis"),
+		    #"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx" = Source{[#"Folder Path"="E:\Dataset_Crime_Analysis\",Name="2023_Staedte_Faelle_HZ.xlsx"]}[Content],
+		    #"Imported Excel Workbook" = Excel.Workbook(#"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx"),
+		    T01_Städte_Sheet = #"Imported Excel Workbook"{[Item="T01_Städte",Kind="Sheet"]}[Data],
+		    #"Removed Top Rows" = Table.Skip(T01_Städte_Sheet, 4),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Top Rows", [PromoteAllScalars=true]),
+		    #"Removed Top Rows1" = Table.Skip(#"Promoted Headers", 4),
+		    #"Renamed Columns2" = Table.RenameColumns(#"Removed Top Rows1",{{"Column12", "AQ"}}),
+		    #"Removed Other Columns" = Table.SelectColumns(#"Renamed Columns2",{"Straftat", "Stadt", "Anzahl erfasste Fälle", "HZ", "AQ"}),
+		    #"Filtered Rows" = Table.SelectRows(#"Removed Other Columns", each ([Straftat] = "Straftaten insgesamt")),
+		    #"Added Custom" = Table.AddColumn(#"Filtered Rows", "Year", each 2023),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Added Custom",{{"Straftat", type text}, {"Stadt", type text}, {"Anzahl erfasste Fälle", Int64.Type}, {"HZ", type number}, {"AQ", type number}}),
+		    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"Anzahl erfasste Fälle", "erfasste Fälle"}})
+		in
+		    #"Renamed Columns"
+	lineageTag: 0b079463-2afc-4e62-9eab-a91a8f6af06f
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 2024_Template =
+		let
+		    Source = Folder.Files("E:\Dataset_Crime_Analysis"),
+		    #"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx" = Source{[#"Folder Path"="E:\Dataset_Crime_Analysis\",Name="2024_Staedte_Faelle_HZ.xlsx"]}[Content],
+		    #"Imported Excel Workbook" = Excel.Workbook(#"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx"),
+		    T01_Städte_Sheet = #"Imported Excel Workbook"{[Item="T01_Städte",Kind="Sheet"]}[Data],
+		    #"Removed Top Rows" = Table.Skip(T01_Städte_Sheet, 4),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Top Rows", [PromoteAllScalars=true]),
+		    #"Removed Top Rows1" = Table.Skip(#"Promoted Headers", 4),
+		    #"Renamed Columns2" = Table.RenameColumns(#"Removed Top Rows1",{{"Column12", "AQ"}}),
+		    #"Removed Other Columns" = Table.SelectColumns(#"Renamed Columns2",{"Straftat", "Stadt", "Anzahl erfasste Fälle", "HZ", "AQ"}),
+		    #"Filtered Rows" = Table.SelectRows(#"Removed Other Columns", each ([Straftat] = "Straftaten insgesamt")),
+		    #"Added Custom" = Table.AddColumn(#"Filtered Rows", "Year", each 2024),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Added Custom",{{"Straftat", type text}, {"Stadt", type text}, {"Anzahl erfasste Fälle", Int64.Type}, {"HZ", type number}, {"AQ", type number}}),
+		    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"Anzahl erfasste Fälle", "erfasste Fälle"}})
+		in
+		    #"Renamed Columns"
+	lineageTag: 34b14bd5-832b-4b7b-9f1e-da520f3f2c1a
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 2025_Template =
+		let
+		    Source = Folder.Files("E:\Dataset_Crime_Analysis"),
+		    #"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx" = Source{[#"Folder Path"="E:\Dataset_Crime_Analysis\",Name="2025_Staedte_Faelle_HZ.xlsx"]}[Content],
+		    #"Imported Excel Workbook" = Excel.Workbook(#"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx"),
+		    T01_Städte_Sheet = #"Imported Excel Workbook"{[Item="T01_Städte",Kind="Sheet"]}[Data],
+		    #"Removed Top Rows" = Table.Skip(T01_Städte_Sheet, 4),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Top Rows", [PromoteAllScalars=true]),
+		    #"Removed Top Rows1" = Table.Skip(#"Promoted Headers", 4),
+		    #"Renamed Columns2" = Table.RenameColumns(#"Removed Top Rows1",{{"Column12", "AQ"}, {"HZ nach Zensus 22", "HZ"}}),
+		    #"Removed Other Columns" = Table.SelectColumns(#"Renamed Columns2",{"Straftat", "Stadt", "Anzahl erfasste Fälle", "HZ", "AQ"}),
+		    #"Filtered Rows" = Table.SelectRows(#"Removed Other Columns", each ([Straftat] = "Straftaten insgesamt")),
+		    #"Added Custom" = Table.AddColumn(#"Filtered Rows", "Year", each 2025),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Added Custom",{{"Straftat", type text}, {"Stadt", type text}, {"Anzahl erfasste Fälle", Int64.Type}, {"HZ", type number}, {"AQ", type number}}),
+		    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"Anzahl erfasste Fälle", "erfasste Fälle"}})
+		in
+		    #"Renamed Columns"
+	lineageTag: ae9b281c-1c49-4146-a8a6-69d2bd479eff
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 2015_ByCategory =
+		let
+		    Source = Folder.Files("E:\Dataset_Crime_Analysis"),
+		    #"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx" = Source{[#"Folder Path"="E:\Dataset_Crime_Analysis\",Name="2015_Staedte_Faelle_HZ.xlsx"]}[Content],
+		    #"Imported Excel Workbook" = Excel.Workbook(#"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx"),
+		    T01_Städte_Sheet = #"Imported Excel Workbook"{[Item="T01_Städte",Kind="Sheet"]}[Data],
+		    #"Removed Top Rows" = Table.Skip(T01_Städte_Sheet, 4),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Top Rows", [PromoteAllScalars=true]),
+		    #"Removed Top Rows1" = Table.Skip(#"Promoted Headers", 4),
+		    #"Removed Other Columns" = Table.SelectColumns(#"Removed Top Rows1",{"Straftat", "Stadt", "erfasste Fälle", "HZ nach Zensus", "Column12"}),
+		    #"Renamed Columns" = Table.RenameColumns(#"Removed Other Columns",{{"Column12", "AQ"}}),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns",{{"AQ", type number}, {"Straftat", type text}, {"Stadt", type text}, {"erfasste Fälle", Int64.Type}, {"HZ nach Zensus", type number}}),
+		    #"Renamed Columns1" = Table.RenameColumns(#"Changed Type",{{"HZ nach Zensus", "HZ"}}),
+		    #"Added Custom" = Table.AddColumn(#"Renamed Columns1", "Year", each 2015)
+		in
+		    #"Added Custom"
+	lineageTag: 4660b650-9b60-4220-b8ae-d7bf13d68f57
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 2016_ByCategory =
+		let
+		    Source = Folder.Files("E:\Dataset_Crime_Analysis"),
+		    #"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx" = Source{[#"Folder Path"="E:\Dataset_Crime_Analysis\",Name="2016_Staedte_Faelle_HZ.xlsx"]}[Content],
+		    #"Imported Excel Workbook" = Excel.Workbook(#"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx"),
+		    T01_Städte_Sheet = #"Imported Excel Workbook"{[Item="BKA-LKS-F-05-T01 Städte ab 100T",Kind="Sheet"]}[Data],
+		    #"Removed Top Rows" = Table.Skip(T01_Städte_Sheet, 4),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Top Rows", [PromoteAllScalars=true]),
+		    #"Removed Top Rows1" = Table.Skip(#"Promoted Headers", 4),
+		    #"Removed Other Columns" = Table.SelectColumns(#"Removed Top Rows1",{"Straftat", "Stadt", "erfasste Fälle", "HZ nach Zensus", "Column12"}),
+		    #"Renamed Columns" = Table.RenameColumns(#"Removed Other Columns",{{"Column12", "AQ"}}),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns",{{"AQ", type number}, {"Straftat", type text}, {"Stadt", type text}, {"erfasste Fälle", Int64.Type}, {"HZ nach Zensus", type number}}),
+		    #"Renamed Columns1" = Table.RenameColumns(#"Changed Type",{{"HZ nach Zensus", "HZ"}}),
+		    #"Added Custom" = Table.AddColumn(#"Renamed Columns1", "Year", each 2016)
+		in
+		    #"Added Custom"
+	lineageTag: ecd1b4af-93fe-43f3-9964-8e65e854b514
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 2017_ByCategory =
+		let
+		    Source = Folder.Files("E:\Dataset_Crime_Analysis"),
+		    #"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx" = Source{[#"Folder Path"="E:\Dataset_Crime_Analysis\",Name="2017_Staedte_Faelle_HZ.xlsx"]}[Content],
+		    #"Imported Excel Workbook" = Excel.Workbook(#"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx"),
+		    T01_Städte_Sheet = #"Imported Excel Workbook"{[Item="T01_Städte",Kind="Sheet"]}[Data],
+		    #"Removed Top Rows" = Table.Skip(T01_Städte_Sheet, 4),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Top Rows", [PromoteAllScalars=true]),
+		    #"Removed Top Rows1" = Table.Skip(#"Promoted Headers", 4),
+		    #"Removed Other Columns" = Table.SelectColumns(#"Removed Top Rows1",{"Straftat", "Stadt", "erfasste Fälle", "HZ nach Zensus", "Column12"}),
+		    #"Renamed Columns" = Table.RenameColumns(#"Removed Other Columns",{{"Column12", "AQ"}}),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns",{{"AQ", type number}, {"Straftat", type text}, {"Stadt", type text}, {"erfasste Fälle", Int64.Type}, {"HZ nach Zensus", type number}}),
+		    #"Renamed Columns1" = Table.RenameColumns(#"Changed Type",{{"HZ nach Zensus", "HZ"}}),
+		    #"Added Custom" = Table.AddColumn(#"Renamed Columns1", "Year", each 2017)
+		in
+		    #"Added Custom"
+	lineageTag: b99f3a01-4e74-4d2a-a998-4bc47f7ab134
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 2018_ByCategory =
+		let
+		    Source = Folder.Files("E:\Dataset_Crime_Analysis"),
+		    #"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx" = Source{[#"Folder Path"="E:\Dataset_Crime_Analysis\",Name="2018_Staedte_Faelle_HZ.xlsx"]}[Content],
+		    #"Imported Excel Workbook" = Excel.Workbook(#"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx"),
+		    T01_Städte_Sheet = #"Imported Excel Workbook"{[Item="BKA-LKS-F-05-T01-Staedte-ab-100",Kind="Sheet"]}[Data],
+		    #"Removed Top Rows" = Table.Skip(T01_Städte_Sheet, 1),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Top Rows", [PromoteAllScalars=true]),
+		    #"Removed Top Rows1" = Table.Skip(#"Promoted Headers",1),
+		    #"Removed Other Columns" = Table.SelectColumns(#"Removed Top Rows1",{"Straftat", "Stadt", "erfasste Faelle", "HZ nach Zensus", "Aufklaerungsquote"}),
+		    #"Renamed Columns1" = Table.RenameColumns(#"Removed Other Columns",{{"HZ nach Zensus", "HZ"}}),
+		    #"Added Custom" = Table.AddColumn(#"Renamed Columns1", "Year", each 2018),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Added Custom",{{"erfasste Faelle", Int64.Type}, {"Straftat", type text}, {"Stadt", type text}, {"HZ", type number}, {"Aufklaerungsquote", type number}}),
+		    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"Aufklaerungsquote", "AQ"}, {"erfasste Faelle", "erfasste Fälle"}})
+		in
+		    #"Renamed Columns"
+	lineageTag: 9cd2bff9-1726-4f50-be41-b6d3ee9a1176
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 2019_ByCategory =
+		let
+		    Source = Folder.Files("E:\Dataset_Crime_Analysis"),
+		    #"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx" = Source{[#"Folder Path"="E:\Dataset_Crime_Analysis\",Name="2019_Staedte_Faelle_HZ.xlsx"]}[Content],
+		    #"Imported Excel Workbook" = Excel.Workbook(#"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx"),
+		    T01_Städte_Sheet = #"Imported Excel Workbook"{[Item="T01_Städte",Kind="Sheet"]}[Data],
+		    #"Removed Top Rows" = Table.Skip(T01_Städte_Sheet, 4),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Top Rows", [PromoteAllScalars=true]),
+		    #"Removed Top Rows1" = Table.Skip(#"Promoted Headers", 4),
+		    #"Removed Other Columns" = Table.SelectColumns(#"Removed Top Rows1",{"Straftat", "Stadt", "erfasste Fälle", "HZ nach Zensus", "Column12"}),
+		    #"Renamed Columns" = Table.RenameColumns(#"Removed Other Columns",{{"Column12", "AQ"}}),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns",{{"AQ", type number}, {"Straftat", type text}, {"Stadt", type text}, {"erfasste Fälle", Int64.Type}, {"HZ nach Zensus", type number}}),
+		    #"Renamed Columns1" = Table.RenameColumns(#"Changed Type",{{"HZ nach Zensus", "HZ"}}),
+		    #"Added Custom" = Table.AddColumn(#"Renamed Columns1", "Year", each 2019),
+		    #"Changed Type1" = Table.TransformColumnTypes(#"Added Custom",{{"erfasste Fälle", Int64.Type}})
+		in
+		    #"Changed Type1"
+	lineageTag: 0cde81ed-e513-4cd4-9216-8115495ce76e
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 2020_ByCategory =
+		let
+		    Source = Folder.Files("E:\Dataset_Crime_Analysis"),
+		    #"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx" = Source{[#"Folder Path"="E:\Dataset_Crime_Analysis\",Name="2020_Staedte_Faelle_HZ.xlsx"]}[Content],
+		    #"Imported Excel Workbook" = Excel.Workbook(#"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx"),
+		    T01_Städte_Sheet = #"Imported Excel Workbook"{[Item="T01_Städte",Kind="Sheet"]}[Data],
+		    #"Removed Top Rows" = Table.Skip(T01_Städte_Sheet, 4),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Top Rows", [PromoteAllScalars=true]),
+		    #"Removed Top Rows1" = Table.Skip(#"Promoted Headers", 4),
+		    #"Renamed Columns2" = Table.RenameColumns(#"Removed Top Rows1",{{"Column12", "AQ"}}),
+		    #"Removed Other Columns" = Table.SelectColumns(#"Renamed Columns2",{"Straftat", "Stadt", "Anzahl erfasste Fälle", "HZ", "AQ"}),
+		    #"Added Custom" = Table.AddColumn(#"Removed Other Columns", "Year", each 2020),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Added Custom",{{"Straftat", type text}, {"Stadt", type text}, {"Anzahl erfasste Fälle", Int64.Type}, {"HZ", type number}, {"AQ", type number}}),
+		    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"Anzahl erfasste Fälle", "erfasste Fälle"}})
+		in
+		    #"Renamed Columns"
+	lineageTag: 065d4970-d872-4cb7-87fa-6a6fc368fda9
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 2021_ByCategory =
+		let
+		    Source = Folder.Files("E:\Dataset_Crime_Analysis"),
+		    #"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx" = Source{[#"Folder Path"="E:\Dataset_Crime_Analysis\",Name="2021_Staedte_Faelle_HZ.xlsx"]}[Content],
+		    #"Imported Excel Workbook" = Excel.Workbook(#"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx"),
+		    T01_Städte_Sheet = #"Imported Excel Workbook"{[Item="T01_Städte",Kind="Sheet"]}[Data],
+		    #"Removed Top Rows" = Table.Skip(T01_Städte_Sheet, 4),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Top Rows", [PromoteAllScalars=true]),
+		    #"Removed Top Rows1" = Table.Skip(#"Promoted Headers", 4),
+		    #"Renamed Columns2" = Table.RenameColumns(#"Removed Top Rows1",{{"Column12", "AQ"}}),
+		    #"Removed Other Columns" = Table.SelectColumns(#"Renamed Columns2",{"Straftat", "Stadt", "Anzahl erfasste Fälle", "HZ", "AQ"}),
+		    #"Added Custom" = Table.AddColumn(#"Removed Other Columns", "Year", each 2021),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Added Custom",{{"Straftat", type text}, {"Stadt", type text}, {"Anzahl erfasste Fälle", Int64.Type}, {"HZ", type number}, {"AQ", type number}}),
+		    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"Anzahl erfasste Fälle", "erfasste Fälle"}})
+		in
+		    #"Renamed Columns"
+	lineageTag: 5ab4e818-ddc6-432f-b220-9666155bd0ff
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 2022_ByCategory =
+		let
+		    Source = Folder.Files("E:\Dataset_Crime_Analysis"),
+		    #"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx" = Source{[#"Folder Path"="E:\Dataset_Crime_Analysis\",Name="2022_Staedte_Faelle_HZ.xlsx"]}[Content],
+		    #"Imported Excel Workbook" = Excel.Workbook(#"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx"),
+		    T01_Städte_Sheet = #"Imported Excel Workbook"{[Item="T01_Städte",Kind="Sheet"]}[Data],
+		    #"Removed Top Rows" = Table.Skip(T01_Städte_Sheet, 4),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Top Rows", [PromoteAllScalars=true]),
+		    #"Removed Top Rows1" = Table.Skip(#"Promoted Headers", 4),
+		    #"Renamed Columns2" = Table.RenameColumns(#"Removed Top Rows1",{{"Column12", "AQ"}}),
+		    #"Removed Other Columns" = Table.SelectColumns(#"Renamed Columns2",{"Straftat", "Stadt", "Anzahl erfasste Fälle", "HZ", "AQ"}),
+		    #"Added Custom" = Table.AddColumn(#"Removed Other Columns", "Year", each 2022),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Added Custom",{{"Straftat", type text}, {"Stadt", type text}, {"Anzahl erfasste Fälle", Int64.Type}, {"HZ", type number}, {"AQ", type number}}),
+		    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"Anzahl erfasste Fälle", "erfasste Fälle"}})
+		in
+		    #"Renamed Columns"
+	lineageTag: 7c30ae89-bd8c-4426-b993-96c244db0d28
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 2023_ByCategory =
+		let
+		    Source = Folder.Files("E:\Dataset_Crime_Analysis"),
+		    #"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx" = Source{[#"Folder Path"="E:\Dataset_Crime_Analysis\",Name="2023_Staedte_Faelle_HZ.xlsx"]}[Content],
+		    #"Imported Excel Workbook" = Excel.Workbook(#"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx"),
+		    T01_Städte_Sheet = #"Imported Excel Workbook"{[Item="T01_Städte",Kind="Sheet"]}[Data],
+		    #"Removed Top Rows" = Table.Skip(T01_Städte_Sheet, 4),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Top Rows", [PromoteAllScalars=true]),
+		    #"Removed Top Rows1" = Table.Skip(#"Promoted Headers", 4),
+		    #"Renamed Columns2" = Table.RenameColumns(#"Removed Top Rows1",{{"Column12", "AQ"}}),
+		    #"Removed Other Columns" = Table.SelectColumns(#"Renamed Columns2",{"Straftat", "Stadt", "Anzahl erfasste Fälle", "HZ", "AQ"}),
+		    #"Added Custom" = Table.AddColumn(#"Removed Other Columns", "Year", each 2023),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Added Custom",{{"Straftat", type text}, {"Stadt", type text}, {"Anzahl erfasste Fälle", Int64.Type}, {"HZ", type number}, {"AQ", type number}}),
+		    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"Anzahl erfasste Fälle", "erfasste Fälle"}})
+		in
+		    #"Renamed Columns"
+	lineageTag: c0689f94-0719-4070-bb5e-8146fa5405e1
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 2024_ByCategory =
+		let
+		    Source = Folder.Files("E:\Dataset_Crime_Analysis"),
+		    #"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx" = Source{[#"Folder Path"="E:\Dataset_Crime_Analysis\",Name="2024_Staedte_Faelle_HZ.xlsx"]}[Content],
+		    #"Imported Excel Workbook" = Excel.Workbook(#"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx"),
+		    T01_Städte_Sheet = #"Imported Excel Workbook"{[Item="T01_Städte",Kind="Sheet"]}[Data],
+		    #"Removed Top Rows" = Table.Skip(T01_Städte_Sheet, 4),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Top Rows", [PromoteAllScalars=true]),
+		    #"Removed Top Rows1" = Table.Skip(#"Promoted Headers", 4),
+		    #"Renamed Columns2" = Table.RenameColumns(#"Removed Top Rows1",{{"Column12", "AQ"}}),
+		    #"Removed Other Columns" = Table.SelectColumns(#"Renamed Columns2",{"Straftat", "Stadt", "Anzahl erfasste Fälle", "HZ", "AQ"}),
+		    #"Added Custom" = Table.AddColumn(#"Removed Other Columns", "Year", each 2024),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Added Custom",{{"Straftat", type text}, {"Stadt", type text}, {"Anzahl erfasste Fälle", Int64.Type}, {"HZ", type number}, {"AQ", type number}}),
+		    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"Anzahl erfasste Fälle", "erfasste Fälle"}})
+		in
+		    #"Renamed Columns"
+	lineageTag: 6e915cbc-4c1b-4045-9acc-11f524baff2d
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression 2025_ByCategory =
+		let
+		    Source = Folder.Files("E:\Dataset_Crime_Analysis"),
+		    #"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx" = Source{[#"Folder Path"="E:\Dataset_Crime_Analysis\",Name="2025_Staedte_Faelle_HZ.xlsx"]}[Content],
+		    #"Imported Excel Workbook" = Excel.Workbook(#"E:\Dataset_Crime_Analysis\_2015_Staedte_Faelle_HZ xlsx"),
+		    T01_Städte_Sheet = #"Imported Excel Workbook"{[Item="T01_Städte",Kind="Sheet"]}[Data],
+		    #"Removed Top Rows" = Table.Skip(T01_Städte_Sheet, 4),
+		    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Top Rows", [PromoteAllScalars=true]),
+		    #"Removed Top Rows1" = Table.Skip(#"Promoted Headers", 4),
+		    #"Renamed Columns2" = Table.RenameColumns(#"Removed Top Rows1",{{"Column12", "AQ"}, {"HZ nach Zensus 22", "HZ"}}),
+		    #"Removed Other Columns" = Table.SelectColumns(#"Renamed Columns2",{"Straftat", "Stadt", "Anzahl erfasste Fälle", "HZ", "AQ"}),
+		    #"Added Custom" = Table.AddColumn(#"Removed Other Columns", "Year", each 2025),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Added Custom",{{"Straftat", type text}, {"Stadt", type text}, {"Anzahl erfasste Fälle", Int64.Type}, {"HZ", type number}, {"AQ", type number}}),
+		    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"Anzahl erfasste Fälle", "erfasste Fälle"}})
+		in
+		    #"Renamed Columns"
+	lineageTag: c5aadf2d-5abd-44ab-8fb3-751c73067aea
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

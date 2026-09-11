@@ -1,0 +1,20 @@
+relationship 132c19c0-7691-4226-61bc-5d6b876ba493
+	fromColumn: Fact_Crime.Stadt
+	toColumn: Dim_City.Stadt
+
+relationship cc417bfb-9713-4bf1-b5c0-2d0bc32ff06a
+	fromColumn: Fact_Crime.Year
+	toColumn: Dim_Year.Year
+
+relationship 13f32afd-7d5b-e1d0-65bf-b221a15b7241
+	fromColumn: Fact_Crime_ByCategory.Stadt
+	toColumn: Dim_City.Stadt
+
+relationship d61a3074-0005-5e65-839b-6708a5c0aeae
+	fromColumn: Fact_Crime_ByCategory.Year
+	toColumn: Dim_Year.Year
+
+relationship c40606a3-2258-0415-64f3-4f9148bd30ab
+	fromColumn: Fact_Crime_ByCategory.Straftat
+	toColumn: Dim_Category.Straftat
+

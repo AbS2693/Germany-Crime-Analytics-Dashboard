@@ -1,0 +1,4620 @@
+cultureInfo en-US
+
+	linguisticMetadata =
+			{
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "fact_crime": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Crime"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fact crime": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Fact_Crime": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "crime": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "fact corruption": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "fact wrongdoing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "fact lawbreaking": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "fact criminality": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "corruption": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "wrongdoing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "lawbreaking": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "criminality": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "fact misconduct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "fact delinquency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "fact_crime.straftat": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Crime",
+			          "ConceptualProperty": "Straftat"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "straftat": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fact_crime.stadt": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Crime",
+			          "ConceptualProperty": "Stadt"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "stadt": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fact_crime.erfasste_fälle": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Crime",
+			          "ConceptualProperty": "erfasste Fälle"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "erfasste fälle": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fact_crime.hz": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Crime",
+			          "ConceptualProperty": "HZ"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "hz": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fact_crime.aq": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Crime",
+			          "ConceptualProperty": "AQ"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "aq": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fact_crime.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Crime",
+			          "ConceptualProperty": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "year": {
+			            "Type": "Noun",
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fact_crime.rank_HZ": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Crime",
+			          "ConceptualProperty": "Rank_HZ"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "rank HZ": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Rank_HZ": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fact_crime.rank_HZ_prior_year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Crime",
+			          "ConceptualProperty": "Rank_HZ_PriorYear"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "rank HZ prior year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Rank_HZ_PriorYear": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "prior year": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "HZ prior year": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "rank hz prior yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "hz prior yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "prior yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "fact_crime.movement": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Crime",
+			          "ConceptualProperty": "Movement"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "movement": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "effort": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "drive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "crusade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "undertaking": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "program": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "measure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "association": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "society": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "faction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "sect": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        }
+			      ]
+			    },
+			    "fact_crime.biggest_climber": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Crime",
+			          "ConceptualProperty": "BiggestClimber"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "biggest climber": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "BiggestClimber": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "climber": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "biggest hiker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "biggest backpacker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "biggest walker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "biggest rambler": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "hiker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "backpacker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "walker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "rambler": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "biggest mountaineer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "mountaineer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "fact_crime.biggest_faller": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Crime",
+			          "ConceptualProperty": "BiggestFaller"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "biggest faller": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "BiggestFaller": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "faller": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "fact_crime.years_in_top_10_streak": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Crime",
+			          "ConceptualProperty": "Years in Top 10 Streak"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "years in top 10 streak": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "streak": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "10 streak": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "top 10 streak": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "in top 10 streak": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "in best 10 streak": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "in first 10 streak": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "in leading 10 streak": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "in maximum 10 streak": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "in peak 10 streak": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "in upper 10 streak": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "year in best 10 streak": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "year in first 10 streak": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "year in leading 10 streak": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "year in maximum 10 streak": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "fact_crime.rank_HZ_chart": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Crime",
+			          "ConceptualProperty": "Rank_HZ_Chart"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "rank HZ chart": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Rank_HZ_Chart": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "HZ chart": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "rank hz diagram": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "rank hz plan": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "rank hz graph": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "rank hz table": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "rank hz map": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "hz diagram": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "hz plan": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "hz graph": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "hz table": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "hz map": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "Top 10 Rank": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_crime.current_number_one": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Crime",
+			          "ConceptualProperty": "CurrentNumberOne"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "current number one": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CurrentNumberOne": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "number one": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "latest number one": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "contemporary number one": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "present number one": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "current no one": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "no one": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "present day number one": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.484
+			          }
+			        }
+			      ]
+			    },
+			    "fact_crime.biggest_climber_value": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Crime",
+			          "ConceptualProperty": "BiggestClimberValue"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "biggest climber value": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "BiggestClimberValue": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "value": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "climber value": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "biggest climber assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "climber assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "biggest climber worth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "biggest climber price": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "biggest climber cost": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "biggest climber charge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "biggest climber rate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "climber worth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "climber price": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "fact_crime.biggest_faller_value": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Crime",
+			          "ConceptualProperty": "BiggestFallerValue"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "biggest faller value": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "BiggestFallerValue": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "value": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "faller value": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "biggest faller assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "faller assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "biggest faller worth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "biggest faller price": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "biggest faller cost": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "biggest faller charge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "biggest faller rate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "faller worth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "faller price": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "fact_crime.chart_title_city_trend": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Crime",
+			          "ConceptualProperty": "ChartTitle_CityTrend"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "chart title city trend": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ChartTitle_CityTrend": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "trend": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "city trend": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "title city trend": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "chart designation city trend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "chart title location trend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "chart title metropolis trend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "chart title municipality trend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "designation city trend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "title location trend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "title metropolis trend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "title municipality trend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "location trend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "metropolis trend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        }
+			      ]
+			    },
+			    "fact_crime.missing_years_message": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Crime",
+			          "ConceptualProperty": "MissingYearsMessage"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "missing years message": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "MissingYearsMessage": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "message": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "years message": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "missing year memo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "missing year memorandum": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "missing year missive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "year memo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "year memorandum": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "year missive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "missing year communication": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "missing year note": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "missing year letter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "missing year dispatch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "fact_crime.warning_icon": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Crime",
+			          "ConceptualProperty": "WarningIcon"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "warning icon": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "WarningIcon": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "icon": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "warning likeness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "warning representation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "warning portrait": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "warning emblem": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "warning logo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "likeness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "representation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "portrait": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "emblem": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "logo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "fact_crime.play_axis_Y": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Crime",
+			          "ConceptualProperty": "PlayAxisY"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "play axis Y": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PlayAxisY": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Y": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "axis Y": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "fact_crime.streak_start_year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Crime",
+			          "ConceptualProperty": "StreakStartYear"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "streak start year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "StreakStartYear": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "start year": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "streak start yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "start yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "fact_crime.streak_end_year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Crime",
+			          "ConceptualProperty": "StreakEndYear"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "streak end year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "StreakEndYear": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "end year": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "streak end yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "end yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "streak completion year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "streak conclusion year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "streak expiration year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "completion year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "conclusion year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "expiration year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "streak close year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "streak finish year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "fact_crime.before_reaching_top_10": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Crime",
+			          "ConceptualProperty": "Before Reaching Top 10"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "before reaching top 10": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "before reaching best 10": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "before reaching first 10": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "before reaching leading 10": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "before reaching maximum 10": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "before reaching peak 10": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "before reaching upper 10": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "before attainment top 10": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "before accomplishment top 10": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "before success top 10": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "before realization top 10": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        }
+			      ]
+			    },
+			    "dim_city": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_City"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim city": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Dim_City": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "city": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "dim location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "dim metropolis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "dim municipality": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "metropolis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "municipality": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "dim town": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "dim metropolitan": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "town": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "metropolitan": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "dim_city.stadt": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_City",
+			          "ConceptualProperty": "Stadt"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "stadt": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "city": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Location"
+			    },
+			    "dim_year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Dim_Year": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "dim yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "dim_year.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Year",
+			          "ConceptualProperty": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fact_crime_by_category": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Crime_ByCategory"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fact crime by category": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Fact_Crime_ByCategory": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "crime": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "fact crime by classification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "fact crime by class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "fact crime by group": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "fact crime by type": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "fact crime by grouping": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "fact crime by kind": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "fact corruption by category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "fact wrongdoing by category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "fact lawbreaking by category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "fact criminality by category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        }
+			      ]
+			    },
+			    "fact_crime_by_category.straftat": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Crime_ByCategory",
+			          "ConceptualProperty": "Straftat"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "straftat": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fact_crime_by_category.stadt": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Crime_ByCategory",
+			          "ConceptualProperty": "Stadt"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "stadt": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fact_crime_by_category.erfasste_fälle": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Crime_ByCategory",
+			          "ConceptualProperty": "erfasste Fälle"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "erfasste fälle": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fact_crime_by_category.hz": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Crime_ByCategory",
+			          "ConceptualProperty": "HZ"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "hz": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fact_crime_by_category.aq": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Crime_ByCategory",
+			          "ConceptualProperty": "AQ"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "aq": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fact_crime_by_category.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Crime_ByCategory",
+			          "ConceptualProperty": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ]
+			    },
+			    "fact_crime_by_category.no_data_message": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Crime_ByCategory",
+			          "ConceptualProperty": "NoDataMessage"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "no data message": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "NoDataMessage": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "message": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "data message": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "no information message": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "no fact message": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "no info message": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "no statistic message": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "information message": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "fact message": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "info message": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "statistic message": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "number data message": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "no document message": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "fact_crime_by_category.chart_title_category_breakdown": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Crime_ByCategory",
+			          "ConceptualProperty": "ChartTitle_CategoryBreakdown"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "chart title category breakdown": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ChartTitle_CategoryBreakdown": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "breakdown": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "category breakdown": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "title category breakdown": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "chart designation category breakdown": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "chart title classification breakdown": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "designation category breakdown": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "title classification breakdown": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "classification breakdown": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "chart name category breakdown": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "chart award category breakdown": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "chart call category breakdown": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "chart heading category breakdown": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "chart label category breakdown": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "fact_crime_by_category.button_label_clear_filters": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Crime_ByCategory",
+			          "ConceptualProperty": "ButtonLabel_ClearFilters"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "button label clear filters": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ButtonLabel_ClearFilters": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "filters": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "clear filters": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "label clear filters": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "button sticker clear filter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "sticker clear filter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "button tag clear filter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "button decal clear filter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "tag clear filter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "decal clear filter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "button label clear strainer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "button label clear sifter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "label clear strainer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "label clear sifter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        }
+			      ]
+			    },
+			    "dim_category": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Category"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim category": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Dim_Category": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "category": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "dim classification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "classification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "dim class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "dim group": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "dim type": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "dim grouping": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "dim kind": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "type": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "grouping": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "dim_category.straftat": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Category",
+			          "ConceptualProperty": "Straftat"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "straftat": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "fact_crime_biggest_climber_climb_fact_crime": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Crime"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_crime.biggest_climber": {
+			          "Target": {
+			            "Entity": "fact_crime.biggest_climber"
+			          }
+			        },
+			        "fact_crime": {
+			          "Target": {
+			            "Entity": "fact_crime"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Subject": {
+			              "Role": "fact_crime.biggest_climber"
+			            },
+			            "Verbs": [
+			              {
+			                "climb": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "fact_crime"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.75,
+			          "ID": "biggest_climber_climb_fact_crimes"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_crime.biggest_climber"
+			            },
+			            "Object": {
+			              "Role": "fact_crime"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "biggest_climber_have_fact_crimes"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_crime"
+			            },
+			            "Object": {
+			              "Role": "fact_crime.biggest_climber"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_crimes_have_biggest_climber"
+			        }
+			      ]
+			    },
+			    "fact_crime_biggest_faller_fall_fact_crime": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Crime"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_crime.biggest_faller": {
+			          "Target": {
+			            "Entity": "fact_crime.biggest_faller"
+			          }
+			        },
+			        "fact_crime": {
+			          "Target": {
+			            "Entity": "fact_crime"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Subject": {
+			              "Role": "fact_crime.biggest_faller"
+			            },
+			            "Verbs": [
+			              {
+			                "fall": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "fact_crime"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.75,
+			          "ID": "biggest_faller_fall_fact_crimes"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_crime.biggest_faller"
+			            },
+			            "Object": {
+			              "Role": "fact_crime"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "biggest_faller_have_fact_crimes"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_crime"
+			            },
+			            "Object": {
+			              "Role": "fact_crime.biggest_faller"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_crimes_have_biggest_faller"
+			        }
+			      ]
+			    },
+			    "dim_city_in_fact_crime_chart_title_city_trend": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_City"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_city": {
+			          "Target": {
+			            "Entity": "dim_city"
+			          }
+			        },
+			        "fact_crime.chart_title_city_trend": {
+			          "Target": {
+			            "Entity": "fact_crime.chart_title_city_trend"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "fact_crime.chart_title_city_trend"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "dim_city"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "fact_crime.chart_title_city_trend"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_cities_are_in_chart_title_city_trend"
+			        }
+			      ]
+			    },
+			    "dim_city_in_stadt": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_City"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_city": {
+			          "Target": {
+			            "Entity": "dim_city"
+			          }
+			        },
+			        "dim_city.stadt": {
+			          "Target": {
+			            "Entity": "dim_city.stadt"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "dim_city.stadt"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "dim_city"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dim_city.stadt"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_cities_are_in_stadts"
+			        }
+			      ]
+			    },
+			    "fact_crime_in_dim_city": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Crime"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_crime": {
+			          "Target": {
+			            "Entity": "fact_crime"
+			          }
+			        },
+			        "dim_city": {
+			          "Target": {
+			            "Entity": "dim_city"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "dim_city"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "fact_crime"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dim_city"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_crimes_are_in_dim_cities"
+			        }
+			      ]
+			    },
+			    "fact_crime_by_category_in_dim_city": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Crime_ByCategory"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_crime_by_category": {
+			          "Target": {
+			            "Entity": "fact_crime_by_category"
+			          }
+			        },
+			        "dim_city": {
+			          "Target": {
+			            "Entity": "dim_city"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "dim_city"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "fact_crime_by_category"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dim_city"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_crime_by_category_are_in_dim_cities"
+			        }
+			      ]
+			    },
+			    "fact_crime_has_straftat": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Crime"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_crime": {
+			          "Target": {
+			            "Entity": "fact_crime"
+			          }
+			        },
+			        "fact_crime.straftat": {
+			          "Target": {
+			            "Entity": "fact_crime.straftat"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_crime"
+			            },
+			            "Object": {
+			              "Role": "fact_crime.straftat"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_crimes_have_straftats"
+			        }
+			      ]
+			    },
+			    "fact_crime_has_erfasste_fälle": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Crime"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_crime": {
+			          "Target": {
+			            "Entity": "fact_crime"
+			          }
+			        },
+			        "fact_crime.erfasste_fälle": {
+			          "Target": {
+			            "Entity": "fact_crime.erfasste_fälle"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_crime"
+			            },
+			            "Object": {
+			              "Role": "fact_crime.erfasste_fälle"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_crimes_have_erfasste_fälles"
+			        }
+			      ]
+			    },
+			    "fact_crime_has_hz": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Crime"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_crime": {
+			          "Target": {
+			            "Entity": "fact_crime"
+			          }
+			        },
+			        "fact_crime.hz": {
+			          "Target": {
+			            "Entity": "fact_crime.hz"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_crime"
+			            },
+			            "Object": {
+			              "Role": "fact_crime.hz"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_crimes_have_hz"
+			        }
+			      ]
+			    },
+			    "fact_crime_has_aq": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Crime"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_crime": {
+			          "Target": {
+			            "Entity": "fact_crime"
+			          }
+			        },
+			        "fact_crime.aq": {
+			          "Target": {
+			            "Entity": "fact_crime.aq"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_crime"
+			            },
+			            "Object": {
+			              "Role": "fact_crime.aq"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_crimes_have_aqs"
+			        }
+			      ]
+			    },
+			    "fact_crime_has_rank_HZ": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Crime"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_crime": {
+			          "Target": {
+			            "Entity": "fact_crime"
+			          }
+			        },
+			        "fact_crime.rank_HZ": {
+			          "Target": {
+			            "Entity": "fact_crime.rank_HZ"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_crime"
+			            },
+			            "Object": {
+			              "Role": "fact_crime.rank_HZ"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_crimes_have_rank_HZ"
+			        }
+			      ]
+			    },
+			    "fact_crime_has_rank_HZ_prior_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Crime"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_crime": {
+			          "Target": {
+			            "Entity": "fact_crime"
+			          }
+			        },
+			        "fact_crime.rank_HZ_prior_year": {
+			          "Target": {
+			            "Entity": "fact_crime.rank_HZ_prior_year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_crime"
+			            },
+			            "Object": {
+			              "Role": "fact_crime.rank_HZ_prior_year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_crimes_have_rank_HZ_prior_year"
+			        }
+			      ]
+			    },
+			    "fact_crime_has_movement": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Crime"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_crime": {
+			          "Target": {
+			            "Entity": "fact_crime"
+			          }
+			        },
+			        "fact_crime.movement": {
+			          "Target": {
+			            "Entity": "fact_crime.movement"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_crime"
+			            },
+			            "Object": {
+			              "Role": "fact_crime.movement"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_crimes_have_movement"
+			        }
+			      ]
+			    },
+			    "fact_crime_has_years_in_top_10_streak": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Crime"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_crime": {
+			          "Target": {
+			            "Entity": "fact_crime"
+			          }
+			        },
+			        "fact_crime.years_in_top_10_streak": {
+			          "Target": {
+			            "Entity": "fact_crime.years_in_top_10_streak"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_crime"
+			            },
+			            "Object": {
+			              "Role": "fact_crime.years_in_top_10_streak"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_crimes_have_years_in_top_10_streak"
+			        }
+			      ]
+			    },
+			    "fact_crime_has_rank_HZ_chart": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Crime"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_crime": {
+			          "Target": {
+			            "Entity": "fact_crime"
+			          }
+			        },
+			        "fact_crime.rank_HZ_chart": {
+			          "Target": {
+			            "Entity": "fact_crime.rank_HZ_chart"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_crime"
+			            },
+			            "Object": {
+			              "Role": "fact_crime.rank_HZ_chart"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_crimes_have_rank_HZ_chart"
+			        }
+			      ]
+			    },
+			    "fact_crime_has_current_number_one": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Crime"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_crime": {
+			          "Target": {
+			            "Entity": "fact_crime"
+			          }
+			        },
+			        "fact_crime.current_number_one": {
+			          "Target": {
+			            "Entity": "fact_crime.current_number_one"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_crime"
+			            },
+			            "Object": {
+			              "Role": "fact_crime.current_number_one"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_crimes_have_current_number_one"
+			        }
+			      ]
+			    },
+			    "fact_crime_has_biggest_climber_value": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Crime"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_crime": {
+			          "Target": {
+			            "Entity": "fact_crime"
+			          }
+			        },
+			        "fact_crime.biggest_climber_value": {
+			          "Target": {
+			            "Entity": "fact_crime.biggest_climber_value"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_crime"
+			            },
+			            "Object": {
+			              "Role": "fact_crime.biggest_climber_value"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_crimes_have_biggest_climber_value"
+			        }
+			      ]
+			    },
+			    "fact_crime_has_biggest_faller_value": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Crime"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_crime": {
+			          "Target": {
+			            "Entity": "fact_crime"
+			          }
+			        },
+			        "fact_crime.biggest_faller_value": {
+			          "Target": {
+			            "Entity": "fact_crime.biggest_faller_value"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_crime"
+			            },
+			            "Object": {
+			              "Role": "fact_crime.biggest_faller_value"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_crimes_have_biggest_faller_value"
+			        }
+			      ]
+			    },
+			    "dim_city_has_fact_crime_chart_title_city_trend": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_City"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_city": {
+			          "Target": {
+			            "Entity": "dim_city"
+			          }
+			        },
+			        "fact_crime.chart_title_city_trend": {
+			          "Target": {
+			            "Entity": "fact_crime.chart_title_city_trend"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_city"
+			            },
+			            "Object": {
+			              "Role": "fact_crime.chart_title_city_trend"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_cities_have_chart_title_city_trend"
+			        }
+			      ]
+			    },
+			    "dim_city_has_fact_crime_missing_years_message": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_City"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_city": {
+			          "Target": {
+			            "Entity": "dim_city"
+			          }
+			        },
+			        "fact_crime.missing_years_message": {
+			          "Target": {
+			            "Entity": "fact_crime.missing_years_message"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_city"
+			            },
+			            "Object": {
+			              "Role": "fact_crime.missing_years_message"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_cities_have_missing_years_message"
+			        }
+			      ]
+			    },
+			    "fact_crime_has_missing_years_message": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Crime"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_crime": {
+			          "Target": {
+			            "Entity": "fact_crime"
+			          }
+			        },
+			        "fact_crime.missing_years_message": {
+			          "Target": {
+			            "Entity": "fact_crime.missing_years_message"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_crime"
+			            },
+			            "Object": {
+			              "Role": "fact_crime.missing_years_message"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_crimes_have_missing_years_message"
+			        }
+			      ]
+			    },
+			    "dim_city_has_fact_crime_warning_icon": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_City"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_city": {
+			          "Target": {
+			            "Entity": "dim_city"
+			          }
+			        },
+			        "fact_crime.warning_icon": {
+			          "Target": {
+			            "Entity": "fact_crime.warning_icon"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_city"
+			            },
+			            "Object": {
+			              "Role": "fact_crime.warning_icon"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_cities_have_warning_icon"
+			        }
+			      ]
+			    },
+			    "fact_crime_has_warning_icon": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Crime"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_crime": {
+			          "Target": {
+			            "Entity": "fact_crime"
+			          }
+			        },
+			        "fact_crime.warning_icon": {
+			          "Target": {
+			            "Entity": "fact_crime.warning_icon"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_crime"
+			            },
+			            "Object": {
+			              "Role": "fact_crime.warning_icon"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_crimes_have_warning_icon"
+			        }
+			      ]
+			    },
+			    "fact_crime_has_play_axis_Y": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Crime"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_crime": {
+			          "Target": {
+			            "Entity": "fact_crime"
+			          }
+			        },
+			        "fact_crime.play_axis_Y": {
+			          "Target": {
+			            "Entity": "fact_crime.play_axis_Y"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_crime"
+			            },
+			            "Object": {
+			              "Role": "fact_crime.play_axis_Y"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_crimes_have_play_axis_Y"
+			        }
+			      ]
+			    },
+			    "fact_crime_has_streak_start_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Crime"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_crime": {
+			          "Target": {
+			            "Entity": "fact_crime"
+			          }
+			        },
+			        "fact_crime.streak_start_year": {
+			          "Target": {
+			            "Entity": "fact_crime.streak_start_year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_crime"
+			            },
+			            "Object": {
+			              "Role": "fact_crime.streak_start_year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_crimes_have_streak_start_year"
+			        }
+			      ]
+			    },
+			    "fact_crime_has_streak_end_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Crime"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_crime": {
+			          "Target": {
+			            "Entity": "fact_crime"
+			          }
+			        },
+			        "fact_crime.streak_end_year": {
+			          "Target": {
+			            "Entity": "fact_crime.streak_end_year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_crime"
+			            },
+			            "Object": {
+			              "Role": "fact_crime.streak_end_year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_crimes_have_streak_end_year"
+			        }
+			      ]
+			    },
+			    "fact_crime_has_before_reaching_top_10": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Crime"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_crime": {
+			          "Target": {
+			            "Entity": "fact_crime"
+			          }
+			        },
+			        "fact_crime.before_reaching_top_10": {
+			          "Target": {
+			            "Entity": "fact_crime.before_reaching_top_10"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_crime"
+			            },
+			            "Object": {
+			              "Role": "fact_crime.before_reaching_top_10"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_crimes_have_before_reaching_top_10"
+			        }
+			      ]
+			    },
+			    "dim_city_has_stadt": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_City"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_city": {
+			          "Target": {
+			            "Entity": "dim_city"
+			          }
+			        },
+			        "dim_city.stadt": {
+			          "Target": {
+			            "Entity": "dim_city.stadt"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_city"
+			            },
+			            "Object": {
+			              "Role": "dim_city.stadt"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_cities_have_stadts"
+			        }
+			      ]
+			    },
+			    "dim_year_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Year"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_year": {
+			          "Target": {
+			            "Entity": "dim_year"
+			          }
+			        },
+			        "dim_year.year": {
+			          "Target": {
+			            "Entity": "dim_year.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_year"
+			            },
+			            "Object": {
+			              "Role": "dim_year.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_years_have_years"
+			        }
+			      ]
+			    },
+			    "fact_crime_by_category_has_erfasste_fälle": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Crime_ByCategory"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_crime_by_category": {
+			          "Target": {
+			            "Entity": "fact_crime_by_category"
+			          }
+			        },
+			        "fact_crime_by_category.erfasste_fälle": {
+			          "Target": {
+			            "Entity": "fact_crime_by_category.erfasste_fälle"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_crime_by_category"
+			            },
+			            "Object": {
+			              "Role": "fact_crime_by_category.erfasste_fälle"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_crime_by_category_have_erfasste_fälles"
+			        }
+			      ]
+			    },
+			    "fact_crime_by_category_has_hz": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Crime_ByCategory"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_crime_by_category": {
+			          "Target": {
+			            "Entity": "fact_crime_by_category"
+			          }
+			        },
+			        "fact_crime_by_category.hz": {
+			          "Target": {
+			            "Entity": "fact_crime_by_category.hz"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_crime_by_category"
+			            },
+			            "Object": {
+			              "Role": "fact_crime_by_category.hz"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_crime_by_category_have_hz"
+			        }
+			      ]
+			    },
+			    "fact_crime_by_category_has_aq": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Crime_ByCategory"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_crime_by_category": {
+			          "Target": {
+			            "Entity": "fact_crime_by_category"
+			          }
+			        },
+			        "fact_crime_by_category.aq": {
+			          "Target": {
+			            "Entity": "fact_crime_by_category.aq"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_crime_by_category"
+			            },
+			            "Object": {
+			              "Role": "fact_crime_by_category.aq"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_crime_by_category_have_aqs"
+			        }
+			      ]
+			    },
+			    "fact_crime_by_category_has_no_data_message": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Crime_ByCategory"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_crime_by_category": {
+			          "Target": {
+			            "Entity": "fact_crime_by_category"
+			          }
+			        },
+			        "fact_crime_by_category.no_data_message": {
+			          "Target": {
+			            "Entity": "fact_crime_by_category.no_data_message"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_crime_by_category"
+			            },
+			            "Object": {
+			              "Role": "fact_crime_by_category.no_data_message"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_crime_by_category_have_no_data_message"
+			        }
+			      ]
+			    },
+			    "dim_city_has_fact_crime_by_category_chart_title_category_breakdown": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_City"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_city": {
+			          "Target": {
+			            "Entity": "dim_city"
+			          }
+			        },
+			        "fact_crime_by_category.chart_title_category_breakdown": {
+			          "Target": {
+			            "Entity": "fact_crime_by_category.chart_title_category_breakdown"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_city"
+			            },
+			            "Object": {
+			              "Role": "fact_crime_by_category.chart_title_category_breakdown"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_cities_have_chart_title_category_breakdown"
+			        }
+			      ]
+			    },
+			    "dim_year_has_fact_crime_by_category_chart_title_category_breakdown": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Year"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_year": {
+			          "Target": {
+			            "Entity": "dim_year"
+			          }
+			        },
+			        "fact_crime_by_category.chart_title_category_breakdown": {
+			          "Target": {
+			            "Entity": "fact_crime_by_category.chart_title_category_breakdown"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_year"
+			            },
+			            "Object": {
+			              "Role": "fact_crime_by_category.chart_title_category_breakdown"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_years_have_chart_title_category_breakdown"
+			        }
+			      ]
+			    },
+			    "dim_city_has_fact_crime_by_category_button_label_clear_filters": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_City"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_city": {
+			          "Target": {
+			            "Entity": "dim_city"
+			          }
+			        },
+			        "fact_crime_by_category.button_label_clear_filters": {
+			          "Target": {
+			            "Entity": "fact_crime_by_category.button_label_clear_filters"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_city"
+			            },
+			            "Object": {
+			              "Role": "fact_crime_by_category.button_label_clear_filters"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_cities_have_button_label_clear_filters"
+			        }
+			      ]
+			    },
+			    "dim_year_has_fact_crime_by_category_button_label_clear_filters": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Year"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_year": {
+			          "Target": {
+			            "Entity": "dim_year"
+			          }
+			        },
+			        "fact_crime_by_category.button_label_clear_filters": {
+			          "Target": {
+			            "Entity": "fact_crime_by_category.button_label_clear_filters"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_year"
+			            },
+			            "Object": {
+			              "Role": "fact_crime_by_category.button_label_clear_filters"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_years_have_button_label_clear_filters"
+			        }
+			      ]
+			    },
+			    "dim_category_has_straftat": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Category"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_category": {
+			          "Target": {
+			            "Entity": "dim_category"
+			          }
+			        },
+			        "dim_category.straftat": {
+			          "Target": {
+			            "Entity": "dim_category.straftat"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_category"
+			            },
+			            "Object": {
+			              "Role": "dim_category.straftat"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_categories_have_straftats"
+			        }
+			      ]
+			    },
+			    "fact_crime_has_dim_city": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Crime"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_crime": {
+			          "Target": {
+			            "Entity": "fact_crime"
+			          }
+			        },
+			        "dim_city": {
+			          "Target": {
+			            "Entity": "dim_city"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_crime"
+			            },
+			            "Object": {
+			              "Role": "dim_city"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_crimes_have_dim_cities"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_city"
+			            },
+			            "Object": {
+			              "Role": "fact_crime"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_cities_have_fact_crimes"
+			        }
+			      ]
+			    },
+			    "fact_crime_has_dim_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Crime"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_crime": {
+			          "Target": {
+			            "Entity": "fact_crime"
+			          }
+			        },
+			        "dim_year": {
+			          "Target": {
+			            "Entity": "dim_year"
+			          },
+			          "Nouns": [
+			            {
+			              "year": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_crime"
+			            },
+			            "Object": {
+			              "Role": "dim_year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_crimes_have_dim_years"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_year"
+			            },
+			            "Object": {
+			              "Role": "fact_crime"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_years_have_fact_crimes"
+			        }
+			      ]
+			    },
+			    "fact_crime_by_category_has_dim_city": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Crime_ByCategory"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_crime_by_category": {
+			          "Target": {
+			            "Entity": "fact_crime_by_category"
+			          }
+			        },
+			        "dim_city": {
+			          "Target": {
+			            "Entity": "dim_city"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_crime_by_category"
+			            },
+			            "Object": {
+			              "Role": "dim_city"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_crime_by_category_have_dim_cities"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_city"
+			            },
+			            "Object": {
+			              "Role": "fact_crime_by_category"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_cities_have_fact_crime_by_category"
+			        }
+			      ]
+			    },
+			    "fact_crime_by_category_has_dim_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Crime_ByCategory"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_crime_by_category": {
+			          "Target": {
+			            "Entity": "fact_crime_by_category"
+			          }
+			        },
+			        "dim_year": {
+			          "Target": {
+			            "Entity": "dim_year"
+			          },
+			          "Nouns": [
+			            {
+			              "year": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_crime_by_category"
+			            },
+			            "Object": {
+			              "Role": "dim_year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_crime_by_category_have_dim_years"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_year"
+			            },
+			            "Object": {
+			              "Role": "fact_crime_by_category"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_years_have_fact_crime_by_category"
+			        }
+			      ]
+			    },
+			    "fact_crime_by_category_has_dim_category": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Crime_ByCategory"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_crime_by_category": {
+			          "Target": {
+			            "Entity": "fact_crime_by_category"
+			          }
+			        },
+			        "dim_category": {
+			          "Target": {
+			            "Entity": "dim_category"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_crime_by_category"
+			            },
+			            "Object": {
+			              "Role": "dim_category"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_crime_by_category_have_dim_categories"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_category"
+			            },
+			            "Object": {
+			              "Role": "fact_crime_by_category"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_categories_have_fact_crime_by_category"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
+			    }
+			  }
+			}
+		contentType: json
+

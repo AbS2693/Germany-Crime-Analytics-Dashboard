@@ -1,0 +1,29 @@
+table Dim_City
+	lineageTag: c875d4bc-9812-4d17-bf29-36d8bafe5a02
+
+	column Stadt
+		dataType: string
+		lineageTag: f9d4cfe8-ed38-48f7-b7a5-0beca3f620e0
+		dataCategory: City
+		summarizeBy: none
+		sourceColumn: Stadt
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_City = m
+		mode: import
+		source =
+				let
+				    Source = Fact_Crime,
+				    #"Removed Other Columns" = Table.SelectColumns(Source,{"Stadt"}),
+				    #"Removed Duplicates" = Table.Distinct(#"Removed Other Columns"),
+				    #"Filtered Rows" = Table.SelectRows(#"Removed Duplicates", each ([Stadt] <> null and [Stadt] <> ""))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

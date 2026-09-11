@@ -1,0 +1,27 @@
+table Dim_Category
+	lineageTag: 1d4c5ad0-a5bd-4b9f-a679-98852edbf5e0
+
+	column Straftat
+		dataType: string
+		lineageTag: b3a61ad3-467e-45bc-9088-c2e50c0bf1ba
+		summarizeBy: none
+		sourceColumn: Straftat
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Category = m
+		mode: import
+		source =
+				let
+				    Source = Fact_Crime_ByCategory,
+				    #"Removed Other Columns" = Table.SelectColumns(Source,{"Straftat"}),
+				    #"Removed Duplicates" = Table.Distinct(#"Removed Other Columns"),
+				    #"Trimmed Text" = Table.TransformColumns(#"Removed Duplicates",{{"Straftat", Text.Trim, type text}}),
+				    #"Removed Duplicates1" = Table.Distinct(#"Trimmed Text")
+				in
+				    #"Removed Duplicates1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

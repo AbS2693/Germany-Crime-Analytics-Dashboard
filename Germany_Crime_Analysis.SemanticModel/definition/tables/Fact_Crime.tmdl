@@ -1,0 +1,326 @@
+table Fact_Crime
+	lineageTag: 4bb401dc-2e9c-4fa0-92b1-fe09e2c9701f
+
+	measure Rank_HZ = RANKX(ALL(Dim_City[Stadt]), CALCULATE(SUM(Fact_Crime[HZ])), , DESC, DENSE)
+		formatString: 0
+		lineageTag: 6ec052c5-5738-41db-9503-8e2f611f3cf3
+
+	measure Rank_HZ_PriorYear =
+			
+			VAR PriorYearTable = FILTER(ALL(Dim_Year), Dim_Year[Year] = SELECTEDVALUE(Dim_Year[Year]) - 1)
+			RETURN
+			IF(COUNTROWS(PriorYearTable) = 0, BLANK(), CALCULATE([Rank_HZ], PriorYearTable))
+		formatString: 0
+		lineageTag: 3f709a80-7106-455d-bb3c-dd5e39921728
+
+	measure Movement =
+			
+			VAR CurrentRank = [Rank_HZ]
+			VAR PriorRank = [Rank_HZ_PriorYear]
+			VAR IsCurrentTop10 = CurrentRank <= 10
+			VAR IsPriorTop10 = PriorRank <= 10
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    NOT IsCurrentTop10, "Not in Top 10",
+			    ISBLANK(PriorRank) && IsCurrentTop10, "New Entry",
+			    IsCurrentTop10 && NOT IsPriorTop10, "New Entry",
+			    IsCurrentTop10 && IsPriorTop10 && CurrentRank < PriorRank, "Climbed " & (PriorRank - CurrentRank),
+			    IsCurrentTop10 && IsPriorTop10 && CurrentRank > PriorRank, "Fell " & (CurrentRank - PriorRank),
+			    IsCurrentTop10 && IsPriorTop10 && CurrentRank = PriorRank, "No Change"
+			)
+		lineageTag: fb93dc5d-1417-46ac-9acf-50c47d86e64c
+
+	measure BiggestClimber = ```
+			
+			VAR ClimbTable = 
+			    FILTER(
+			        ADDCOLUMNS(
+			            VALUES(Dim_City[Stadt]),
+			            "@CurrentRank", CALCULATE([Rank_HZ]),
+			            "@PriorRank", CALCULATE([Rank_HZ_PriorYear])
+			        ),
+			        NOT ISBLANK([@PriorRank]) && [@CurrentRank] <= 10 && [@PriorRank] <= 10 && [@CurrentRank] < [@PriorRank]
+			    )
+			VAR RankedByClimb = ADDCOLUMNS(ClimbTable, "@Improvement", [@PriorRank] - [@CurrentRank])
+			VAR TopClimber = TOPN(1, RankedByClimb, [@Improvement], DESC, [Stadt], ASC)
+			RETURN
+			    IF(
+			        COUNTROWS(TopClimber) > 0,
+			        "▲ " & CONCATENATEX(TopClimber, [Stadt] & " (climbed " & [@Improvement] & ")"),
+			        "● No climbers"
+			    )
+			```
+		lineageTag: e80b7670-3a20-4d50-ad93-15ede3005aa9
+
+	measure BiggestFaller = ```
+			
+			VAR FallTable = 
+			    FILTER(
+			        ADDCOLUMNS(
+			            VALUES(Dim_City[Stadt]),
+			            "@CurrentRank", CALCULATE([Rank_HZ]),
+			            "@PriorRank", CALCULATE([Rank_HZ_PriorYear])
+			        ),
+			        NOT ISBLANK([@PriorRank]) && [@CurrentRank] <= 10 && [@PriorRank] <= 10 && [@CurrentRank] > [@PriorRank]
+			    )
+			VAR RankedByFall = ADDCOLUMNS(FallTable, "@Drop", [@CurrentRank] - [@PriorRank])
+			VAR TopFaller = TOPN(1, RankedByFall, [@Drop], DESC, [Stadt], ASC)
+			RETURN
+			    IF(
+			        COUNTROWS(TopFaller) > 0,
+			        "▼ " & CONCATENATEX(TopFaller, [Stadt] & " (fell " & [@Drop] & ")"),
+			        "● No fallers"
+			    )
+			```
+		lineageTag: ecbe9553-ddb4-4113-b78d-f7b2eb607b19
+
+	measure 'Years in Top 10 Streak' = ```
+			
+			VAR CityTop10Years = 
+			    FILTER(
+			        ADDCOLUMNS(ALL(Dim_Year[Year]), "@Rank", CALCULATE([Rank_HZ])),
+			        [@Rank] <= 10
+			    )
+			VAR WithGroupID = 
+			    ADDCOLUMNS(
+			        CityTop10Years,
+			        "@GroupID", [Year] - RANKX(CityTop10Years, [Year], , ASC, DENSE)
+			    )
+			VAR MaxStreak = 
+			    MAXX(
+			        WithGroupID,
+			        VAR ThisGroup = [@GroupID]
+			        RETURN COUNTROWS(FILTER(WithGroupID, [@GroupID] = ThisGroup))
+			    )
+			RETURN
+			    IF(ISBLANK(MaxStreak), 0, MaxStreak)
+			```
+		formatString: 0
+		lineageTag: 1914f884-c5d9-42ba-ab26-9fe4ef7f21d1
+
+	measure Rank_HZ_Chart = IF([Rank_HZ] <= 10, [Rank_HZ], BLANK())
+		formatString: 0
+		lineageTag: 3821d371-2384-4a5a-9ea2-56b4ecf3f12c
+
+	measure CurrentNumberOne =
+			
+			VAR TopCity = TOPN(1, VALUES(Dim_City[Stadt]), CALCULATE([Rank_HZ]), ASC)
+			RETURN
+			    CONCATENATEX(TopCity, [Stadt])
+		lineageTag: e8558308-5637-4da6-aeed-f2157dbf11cd
+
+	measure BiggestClimberValue = ```
+			
+			VAR ClimbTable = 
+			    FILTER(
+			        ADDCOLUMNS(
+			            VALUES(Dim_City[Stadt]),
+			            "@CurrentRank", CALCULATE([Rank_HZ]),
+			            "@PriorRank", CALCULATE([Rank_HZ_PriorYear])
+			        ),
+			        NOT ISBLANK([@PriorRank]) && [@CurrentRank] <= 10 && [@PriorRank] <= 10 && [@CurrentRank] < [@PriorRank]
+			    )
+			VAR RankedByClimb = ADDCOLUMNS(ClimbTable, "@Improvement", [@PriorRank] - [@CurrentRank])
+			RETURN
+			    IF(COUNTROWS(RankedByClimb) > 0, MAXX(RankedByClimb, [@Improvement]), 0)
+			```
+		formatString: 0
+		lineageTag: cbab048a-b802-487f-822c-198ed945ec8b
+
+	measure BiggestFallerValue = ```
+			
+			VAR FallTable = 
+			    FILTER(
+			        ADDCOLUMNS(
+			            VALUES(Dim_City[Stadt]),
+			            "@CurrentRank", CALCULATE([Rank_HZ]),
+			            "@PriorRank", CALCULATE([Rank_HZ_PriorYear])
+			        ),
+			        NOT ISBLANK([@PriorRank]) && [@CurrentRank] <= 10 && [@PriorRank] <= 10 && [@CurrentRank] > [@PriorRank]
+			    )
+			VAR RankedByFall = ADDCOLUMNS(FallTable, "@Drop", [@CurrentRank] - [@PriorRank])
+			RETURN
+			    IF(COUNTROWS(RankedByFall) > 0, MAXX(RankedByFall, [@Drop]), 0)
+			```
+		formatString: 0
+		lineageTag: ed85e85a-b1b6-4fc2-98ab-74116a002823
+
+	measure ChartTitle_CityTrend = SELECTEDVALUE(Dim_City[Stadt]) & " — Crime Trend [2015–2025]"
+		lineageTag: d9e44c20-fb23-4c2f-be46-e72c2c427b12
+
+	measure MissingYearsMessage = ```
+			
+			VAR CurrentCity = SELECTEDVALUE(Dim_City[Stadt])
+			VAR MissingYearsTable =
+			    FILTER(
+			        ADDCOLUMNS(
+			            ALL(Dim_Year[Year]),
+			            "HasData", CALCULATE(NOT ISBLANK(SUM(Fact_Crime[HZ])), Dim_City[Stadt] = CurrentCity)
+			        ),
+			        [HasData] = FALSE()
+			    )
+			RETURN
+			IF(
+			    ISBLANK(CurrentCity),
+			    "Select a city to view data notes.",
+			    IF(
+			        COUNTROWS(MissingYearsTable) = 0,
+			        "✓ Complete BKA data available for all years (2015–2025).",
+			        "⚠ " & CurrentCity & " has no BKA-reported data for: " & 
+			        CONCATENATEX(MissingYearsTable, [Year], ", ", [Year], ASC) & 
+			        ". This reflects a genuine gap in the official source, not a dashboard error."
+			    )
+			)
+			```
+		lineageTag: 7729dc7a-d92b-412d-9d43-38bb41f30a75
+
+	measure WarningIcon = IF(ISBLANK([MissingYearsMessage]), "", "⚠")
+		lineageTag: ca688f33-9773-493e-9fab-33ec918941de
+
+	measure PlayAxisY = 1
+		formatString: 0
+		lineageTag: 1ee02ea1-a357-40a9-afb8-62bc8b2e4627
+
+	measure StreakStartYear =
+			
+			VAR YearFlags =
+			    ADDCOLUMNS(
+			        ALL(Dim_Year[Year]),
+			        "InTop10", IF(CALCULATE([Rank_HZ]) <= 10, 1, 0)
+			    )
+			VAR YearFlagsRunning =
+			    ADDCOLUMNS(
+			        YearFlags,
+			        "RunningCount",
+			            VAR CY = [Year]
+			            RETURN SUMX(FILTER(YearFlags, [Year] <= CY && [InTop10] = 1), [InTop10])
+			    )
+			VAR IslandsOnly = FILTER(YearFlagsRunning, [InTop10] = 1)
+			VAR IslandsGrouped =
+			    ADDCOLUMNS(IslandsOnly, "GroupKey", [Year] - [RunningCount])
+			VAR IslandSummary =
+			    ADDCOLUMNS(
+			        SUMMARIZE(IslandsGrouped, [GroupKey]),
+			        "IslandLength", VAR GK = [GroupKey] RETURN COUNTROWS(FILTER(IslandsGrouped, [GroupKey] = GK)),
+			        "IslandStart",  VAR GK = [GroupKey] RETURN MINX(FILTER(IslandsGrouped, [GroupKey] = GK), [Year])
+			    )
+			VAR MaxLen = MAXX(IslandSummary, [IslandLength])
+			RETURN
+			    MINX(FILTER(IslandSummary, [IslandLength] = MaxLen), [IslandStart])
+		formatString: 0
+		lineageTag: 2a6fe06f-4196-4118-9661-b05e41f323dc
+
+	measure StreakEndYear =
+			
+			VAR YearFlags =
+			    ADDCOLUMNS(
+			        ALL(Dim_Year[Year]),
+			        "InTop10", IF(CALCULATE([Rank_HZ]) <= 10, 1, 0)
+			    )
+			VAR YearFlagsRunning =
+			    ADDCOLUMNS(
+			        YearFlags,
+			        "RunningCount",
+			            VAR CY = [Year]
+			            RETURN SUMX(FILTER(YearFlags, [Year] <= CY && [InTop10] = 1), [InTop10])
+			    )
+			VAR IslandsOnly = FILTER(YearFlagsRunning, [InTop10] = 1)
+			VAR IslandsGrouped =
+			    ADDCOLUMNS(IslandsOnly, "GroupKey", [Year] - [RunningCount])
+			VAR IslandSummary =
+			    ADDCOLUMNS(
+			        SUMMARIZE(IslandsGrouped, [GroupKey]),
+			        "IslandLength", VAR GK = [GroupKey] RETURN COUNTROWS(FILTER(IslandsGrouped, [GroupKey] = GK)),
+			        "IslandStart",  VAR GK = [GroupKey] RETURN MINX(FILTER(IslandsGrouped, [GroupKey] = GK), [Year]),
+			        "IslandEnd",    VAR GK = [GroupKey] RETURN MAXX(FILTER(IslandsGrouped, [GroupKey] = GK), [Year])
+			    )
+			VAR MaxLen = MAXX(IslandSummary, [IslandLength])
+			VAR BestStart = MINX(FILTER(IslandSummary, [IslandLength] = MaxLen), [IslandStart])
+			RETURN
+			    MAXX(FILTER(IslandSummary, [IslandStart] = BestStart), [IslandEnd])
+		formatString: 0
+		lineageTag: c7586454-5bc8-437d-91aa-f2e36a615201
+
+	measure 'Before Reaching Top 10' =
+			
+			VAR FirstYear = CALCULATE(MIN(Dim_Year[Year]), ALL(Dim_Year))
+			RETURN
+			IF(
+			    ISBLANK([StreakStartYear]),
+			    BLANK(),
+			    [StreakStartYear] - FirstYear
+			)
+		formatString: 0
+		lineageTag: 5dedf7a3-5bf4-42ed-890a-ea97a752d4f5
+
+	column Straftat
+		dataType: string
+		lineageTag: d31e7e79-7709-4496-9e0c-a2fff85240d1
+		summarizeBy: none
+		sourceColumn: Straftat
+
+		annotation SummarizationSetBy = Automatic
+
+	column Stadt
+		dataType: string
+		lineageTag: 15ab92b8-94ec-4b1a-b524-36c96509994e
+		summarizeBy: none
+		sourceColumn: Stadt
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'erfasste Fälle'
+		dataType: int64
+		formatString: 0
+		lineageTag: b0bb1164-f5f8-4bab-8187-85e8c3e02cfb
+		summarizeBy: sum
+		sourceColumn: erfasste Fälle
+
+		annotation SummarizationSetBy = Automatic
+
+	column HZ
+		dataType: double
+		lineageTag: e0ac63b1-8288-49b6-912e-7142ead2420a
+		summarizeBy: sum
+		sourceColumn: HZ
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AQ
+		dataType: double
+		lineageTag: e0ee07bf-5210-4f91-9560-32f9c039ce45
+		summarizeBy: sum
+		sourceColumn: AQ
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 4835fc82-dfe6-440e-a031-581e3e26ee0e
+		summarizeBy: none
+		sourceColumn: Year
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Fact_Crime = m
+		mode: import
+		source =
+				let
+				    Source = Table.Combine({#"2015_Template_Main Recipe", #"2016_Template", #"2017_Template", #"2018_Template", #"2019_Template", #"2020_Template", #"2021_Template", #"2022_Template", #"2023_Template", #"2024_Template", #"2025_Template"}),
+				    #"Replaced Value" = Table.ReplaceValue(Source,"Rostock, Hanse- und Universitätsstadt","Rostock",Replacer.ReplaceText,{"Stadt"}),
+				    #"Filtered Rows" = Table.SelectRows(#"Replaced Value", each ([Stadt] <> null and [Stadt] <> ""))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

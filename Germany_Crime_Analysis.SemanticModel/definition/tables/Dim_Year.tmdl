@@ -1,0 +1,28 @@
+table Dim_Year
+	lineageTag: b4301a3f-75ca-435e-8d0e-ba0d14e54ac1
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 8475b70b-1430-4124-99ac-a26df7cadcff
+		summarizeBy: none
+		sourceColumn: Year
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Year = m
+		mode: import
+		source =
+				let
+				    Source = Fact_Crime,
+				    #"Removed Other Columns" = Table.SelectColumns(Source,{"Year"}),
+				    #"Removed Duplicates" = Table.Distinct(#"Removed Other Columns")
+				in
+				    #"Removed Duplicates"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
